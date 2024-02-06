@@ -19,6 +19,13 @@
   font-size: 14px;
 }
 
+.error {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
 .submitButton {
   background-color: #4caf50;
   color: white;
