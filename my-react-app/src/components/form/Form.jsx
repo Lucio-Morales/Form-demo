@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
 import inputValidations from "./inputValidations";
+import Button from "../button/Button";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -37,6 +39,8 @@ const LoginForm = () => {
   };
   return (
     <div>
+      <Button />
+
       <div className={styles.formContainer}>
         <form className={styles.form}>
           <input
@@ -81,6 +85,7 @@ const LoginForm = () => {
           {formErrors.address && (
             <p className={styles.error}>{formErrors.address}</p>
           )}
+
           <input
             className={styles.input}
             type="password"
@@ -89,9 +94,11 @@ const LoginForm = () => {
             onChange={handleFormChanges}
             placeholder="Password"
           />
+
           {formErrors.password && (
             <p className={styles.error}>{formErrors.password}</p>
           )}
+
           <input
             className={styles.input}
             name="repeatPassword"
@@ -103,6 +110,7 @@ const LoginForm = () => {
           {formErrors.repeatPassword && (
             <p className={styles.error}>{formErrors.repeatPassword}</p>
           )}
+
           <button type="submit" className={styles.submitButton}>
             Enviar
           </button>
